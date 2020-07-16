@@ -17,7 +17,7 @@
 3. 在$x$方向和$y$方向上使用Sobel滤波器，在此之上求出边缘梯度$f_x$和$f_y$。边缘梯度可以按照下式求得：
    $$
    \text{edge}=\sqrt{{f_x}^2+{f_x}^2}\\
-   \text{tan}=\arctan(\frac{f_y}{f_x})
+   \text{angle}=\arctan(\frac{f_y}{f_x})
    $$
 
 4. 使用下面的公式将梯度方向量化：
@@ -59,15 +59,15 @@
 
 * $\text{angle}(x,y)  = 45$
 
-	如果在$\text{edge}(x,y)$、$\text{edge}(x-1,y)$、$\text{edge}(x+1,y)$中$\text{edge}(x,y)$不是最大的，那么$\text{edge}(x,y)=0$；
+	如果在$\text{edge}(x,y)$、$\text{edge}(x-1,y+1)$、$\text{edge}(x+1,y-1)$中$\text{edge}(x,y)$不是最大的，那么$\text{edge}(x,y)=0$；
 
 * $\text{angle}(x,y)  = 90$
 
-	如果在$\text{edge}(x,y)$、$\text{edge}(x-1,y)$、$\text{edge}(x+1,y)$中$\text{edge}(x,y)$不是最大的，那么$\text{edge}(x,y)=0$；
+	如果在$\text{edge}(x,y)$、$\text{edge}(x,y-1)$、$\text{edge}(x,y+1)$中$\text{edge}(x,y)$不是最大的，那么$\text{edge}(x,y)=0$；
 
 * $\text{angle}(x,y)  = 135$
 
-	如果在$\text{edge}(x,y)$、$\text{edge}(x-1,y)$、$\text{edge}(x+1,y)$中$\text{edge}(x,y)$不是最大的，那么$\text{edge}(x,y)=0$；
+	如果在$\text{edge}(x,y)$、$\text{edge}(x-1,y-1)$、$\text{edge}(x+1,y+1)$中$\text{edge}(x,y)$不是最大的，那么$\text{edge}(x,y)=0$；
 
 | 输入 (imori.jpg) | 输出 (answers_image/answer_42.jpg) |
 | :--------------: | :--------------------------------: |
